@@ -12,3 +12,7 @@
     text-align: center;
   }
 }
+
+nav{
+  border: 0.1em solid #000000;
+}

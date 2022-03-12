@@ -1,0 +1,14 @@
+#logoNav{
+  width: 40%;
+  height: 40%;
+  border-radius: 50%;
+}
+
+@media screen and (max-width:600px) {
+  #navUl{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+}

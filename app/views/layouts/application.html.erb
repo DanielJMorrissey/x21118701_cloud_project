@@ -7,7 +7,6 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="/stylesheet/style.css">
     <%= display_meta_tags title: "Dan's Music Site", icon: "/images/favicon.ico" %>
-    <%= javascript_importmap_tags %>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
   </head>
@@ -30,6 +29,67 @@
       </div>
     </nav>
     <%= yield %>
+    <div class="container">
+      <div class="row">
 
+        <div class="card m-3">
+          <img class="card-img-top m-1" src="/images/first.jpg" alt="Card image" style="width:100%">
+          <div class="card-body">
+            <h4 class="card-title">Rise Against</h4>
+            <p class="card-text">A fake image of Rise Against at a "concert"</p>
+          </div>
+        </div>
+
+        <div class="card m-3">
+          <img class="card-img-top m-1" src="/images/second.jpg" alt="Card image" style="width:100%">
+          <div class="card-body">
+            <h4 class="card-title">Green Day</h4>
+            <p class="card-text">A fake image of Green Day at a "concert"</p>
+          </div>
+        </div>
+
+        <div class="card m-3">
+          <img class="card-img-top m-1" src="/images/third.jpg" alt="Card image" style="width:100%">
+          <div class="card-body">
+            <h4 class="card-title">Metallica</h4>
+            <p class="card-text">A fake image of Metallica at a "concert"</p>
+          </div>
+        </div>
+
+        <div class="card m-3">
+          <img class="card-img-top m-1" src="/images/fourth.jpg" alt="Card image" style="width:100%">
+          <div class="card-body">
+            <h4 class="card-title">Iron Maiden</h4>
+            <p class="card-text">A fake image of Iron Maiden at a "concert"</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-dark bg-primary">
+            <footer>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-6 col-md-3 item">
+                            <img src="/images/guitar192x192.webp" class="logo" alt="Logo" />
+                        </div>
+                        <div class="col-sm-6 col-md-3 item">
+                            <h3>Social Media</h3>
+                            <ul>
+                                <li><a href="https://www.facebook.com/">Facebook</a></li>
+                                <li><a href="https://www.twitter.com/">Twitter</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-6 col-md-3 item">
+                            <h3>Tickets</h3>
+                            <ul>
+                                <li><a href="https://www.ticketmaster.ie/">Ticketmaster</a></li>
+                                <li><a href="https://www.tickets.ie/">Tickets.ie</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
   </body>
 </html>

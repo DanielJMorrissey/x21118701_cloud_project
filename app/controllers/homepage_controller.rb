@@ -25,9 +25,4 @@ class HomepageController < ApplicationController
       render :bands
     end
   end
-
-  private
-  def band_params
-    params.require(:band).permit(:name, :country, :members, :genre)
-  end
 end

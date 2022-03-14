@@ -1,0 +1,8 @@
+<%= simple_form_for @band do |b|  %>
+  <%= b.input :name, input_html: { name: "name" }  %>
+  <%= b.input :country, as: :string, input_html: { name: "country" }  %>
+  <%= b.input :members, input_html: { name: "members", min: 0 }  %>
+  <%= b.input :genre, input_html: { name: "genre" }  %>
+
+  <%= b.button :submit %>
+<% end %>

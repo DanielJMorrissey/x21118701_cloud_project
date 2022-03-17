@@ -11,6 +11,7 @@ class HomepageController < ApplicationController
     @band = Band.new
   end
 
+
   # create- post /bands
   def newbandscompute
     @band = Band.new
@@ -20,9 +21,11 @@ class HomepageController < ApplicationController
     @bandgenre = params[:genre]
     @band = Band.new(name:@bandname, country:@bandcountry, members:@bandmembers.to_i, genre:@bandgenre)
     if @band.save
-      redirect_to "/"
+      @result = "Band Saved"
+      redirect_to "/newbands", locals: {result: @result}
     else
-      render :bands
+      @result = "Failed to save"
+      redirect_to "/newbands"
     end
   end
 end

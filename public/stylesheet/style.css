@@ -65,3 +65,31 @@ li a{
 .cardContainer{
   justify-content: center;
 }
+
+input{
+  padding: 0.5em;
+  margin: 1em;
+  background-color: #dddddd;
+}
+
+label, a{
+  font-size: 1.2em;
+  margin: 1em;
+}
+
+#country{
+  padding: 0em;
+  margin-right: 0.2em;
+}
+
+#members{
+  padding: 0em;
+  margin-right: 0em;
+  font-size: 1.1em;
+}
+
+#save{
+  margin: auto;
+  width: 10%;
+  display: block;
+}

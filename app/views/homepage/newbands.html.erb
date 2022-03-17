@@ -1,8 +1,19 @@
-<%= simple_form_for @band do |b|  %>
-  <%= b.input :name, input_html: { name: "name" }  %>
-  <%= b.input :country, as: :string, input_html: { name: "country" }  %>
-  <%= b.input :members, input_html: { name: "members", min: 0 }  %>
-  <%= b.input :genre, input_html: { name: "genre" }  %>
+<div class="container">
+  <%= simple_form_for @band do |b|  %>
+  <div class="row">
+    <%= b.input :name, input_html: { name: "name", class: "col-10" }  %>
+    <%= b.input :country, as: :string, input_html: { name: "country", class: "col-10" }, label_html: { id: "country" }  %>
+  </div>
+  <div class="row">
+    <%= b.input :members, input_html: { name: "members", min: 0, class: "col-10" }, label_html: { id: "members" } %>
+    <%= b.input :genre, input_html: { name: "genre", class: "col-10" }   %>
+  </div>
 
-  <%= b.button :submit %>
-<% end %>
+    <%= b.button :submit, "Save", class: "btn-primary", id: "save"  %>
+  <% end %>
+
+
+    <p>
+      <%= @result %>
+    </p>
+</div>

@@ -1,3 +1,16 @@
-<p>
-  bands test
-</p>
+<h1>
+  Recommended Bands
+</h1>
+<table>
+    <tr>
+      <th>Band Name</th><th>Country</th><th>Members</th><th>Genre</th>
+    </tr>
+    <% for band in @bands %>
+      <tr>
+        <td><%= band.name %></td>
+        <td><%= band.country %></td>
+        <td><%= band.members %></td>
+        <td><%= band.genre %></td>
+      </tr>
+    <% end %>
+</table>

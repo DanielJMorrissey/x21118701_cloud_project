@@ -92,4 +92,5 @@ label, a{
   margin: auto;
   width: 10%;
   display: block;
+  min-width: fit-content;
 }

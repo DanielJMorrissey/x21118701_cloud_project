@@ -1,13 +1,13 @@
 <h1>
   Recommended Bands
 </h1>
-<table>
+<table class="container table table-striped">
     <tr>
-      <th>Band Name</th><th>Country</th><th>Members</th><th>Genre</th>
+      <th scope="col">Band Name</th><th scope="col">Country</th><th scope="col">Members</th><th scope="col">Genre</th>
     </tr>
     <% for band in @bands %>
       <tr>
-        <td><%= band.name %></td>
+        <td scope="row"><%= band.name %></td>
         <td><%= band.country %></td>
         <td><%= band.members %></td>
         <td><%= band.genre %></td>

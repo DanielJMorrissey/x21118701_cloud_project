@@ -1,12 +1,28 @@
 <div class="container">
   <%= simple_form_for @band do |b|  %>
   <div class="row">
-    <%= b.input :name, input_html: { name: "name", class: "col-10" }  %>
-    <%= b.input :country, as: :string, input_html: { name: "country", class: "col-10" }, label_html: { id: "country" }  %>
+    <% if flash[:name] %>
+      <%= b.input :name, label: "Name*",input_html: { name: "name", value: flash[:name] , class: "col-10" }, label_html: { id: "name" }  %>
+    <% else %>
+      <%= b.input :name, label: "Name*",input_html: { name: "name", class: "col-10" }, label_html: { id: "name" }  %>
+    <% end %>
+    <% if flash[:country] %>
+      <%= b.input :country, as: :string, input_html: { name: "country", value: flash[:country], class: "col-10" }, label_html: { id: "country" }  %>
+    <% else %>
+      <%= b.input :country, as: :string, input_html: { name: "country", class: "col-10" }, label_html: { id: "country" }  %>
+    <% end %>
   </div>
   <div class="row">
-    <%= b.input :members, input_html: { name: "members", min: 1, class: "col-10", value: 1 }, label_html: { id: "members" } %>
-    <%= b.input :genre, input_html: { name: "genre", class: "col-10" }   %>
+    <% if flash[:members] %>
+      <%= b.input :members, input_html: { name: "members", value: flash[:members].to_i, min: 1, class: "col-10", value: 1 }, label_html: { id: "members" } %>
+    <% else %>
+      <%= b.input :members, input_html: { name: "members", min: 1, class: "col-10", value: 1 }, label_html: { id: "members" } %>
+    <% end %>
+    <% if flash[:genre] %>
+      <%= b.input :genre, label: "Genre*", input_html: { name: "genre", value: flash[:genre], class: "col-10" }, label_html: { id: "genre" }   %>
+    <% else %>
+      <%= b.input :genre, label: "Genre*", input_html: { name: "genre", class: "col-10" }, label_html: { id: "genre" }   %>
+    <% end %>
   </div>
 
     <%= b.button :submit, "Save", class: "btn-primary", id: "save"  %>

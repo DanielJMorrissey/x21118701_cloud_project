@@ -23,15 +23,27 @@ class HomepageController < ApplicationController
     if @bandname.length > 0 and @bandgenre.length > 0
       @band = Band.new(name:@bandname, country:@bandcountry, members:@bandmembers.to_i, genre:@bandgenre)
       if @band.save
+        flash[:name] = @bandname
+        flash[:country] = @bandcountry
+        flash[:members] = @bandmembers
+        flash[:genre] = @bandgenre
         @result = "Band Saved"
         flash[:result] = @result
         redirect_to "/newbands"
       else
+        flash[:name] = @bandname
+        flash[:country] = @bandcountry
+        flash[:members] = @bandmembers
+        flash[:genre] = @bandgenre
         @result = "Failed to save"
         flash[:result] = @result
         redirect_to "/newbands"
       end
     else
+      flash[:name] = @bandname
+      flash[:country] = @bandcountry
+      flash[:members] = @bandmembers
+      flash[:genre] = @bandgenre
       @result = "Please enter a band name or genre!"
       flash[:result] = @result
       redirect_to "/newbands"

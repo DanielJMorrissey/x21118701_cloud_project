@@ -82,6 +82,11 @@ label, a{
   margin-right: 0.2em;
 }
 
+#name, #genre{
+  padding: 0em;
+  margin-right: 0.6em;
+}
+
 #members{
   padding: 0em;
   margin-right: 0em;
@@ -93,4 +98,15 @@ label, a{
   width: 10%;
   display: block;
   min-width: fit-content;
+}
+
+h1, #intro{
+  text-align: center;
+}
+
+#flash{
+  width: 80%;
+  margin: 1em auto;
+  text-align: center;
+  font-size: 1.3em;
 }

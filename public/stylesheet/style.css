@@ -110,3 +110,14 @@ h1, #intro{
   text-align: center;
   font-size: 1.3em;
 }
+
+audio, #bensound{
+  width: 80%;
+  display: block;
+  margin: 1em auto;
+}
+
+#bensound > a{
+  font-size: 1em;
+  margin: 0em;
+}

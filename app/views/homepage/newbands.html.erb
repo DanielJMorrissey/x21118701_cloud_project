@@ -1,5 +1,5 @@
 <div class="container">
-  <%= simple_form_for @band do |b|  %>
+  <%= simple_form_for @band, url: '/newbands' do |b|  %>
   <div class="row">
     <% if flash[:name] %>
       <%= b.input :name, label: "Name*",input_html: { name: "name", value: flash[:name] , class: "col-10" }, label_html: { id: "name" }  %>
@@ -14,7 +14,7 @@
   </div>
   <div class="row">
     <% if flash[:members] %>
-      <%= b.input :members, input_html: { name: "members", value: flash[:members].to_i, min: 1, class: "col-10", value: 1 }, label_html: { id: "members" } %>
+      <%= b.input :members, input_html: { name: "members", value: flash[:members].to_i, min: 1, class: "col-10" }, label_html: { id: "members" } %>
     <% else %>
       <%= b.input :members, input_html: { name: "members", min: 1, class: "col-10", value: 1 }, label_html: { id: "members" } %>
     <% end %>
@@ -28,9 +28,11 @@
     <%= b.button :submit, "Save", class: "btn-primary", id: "save"  %>
   <% end %>
 
-  <% if flash[:result] %>
+
     <p id="flash">
-      <%= flash[:result] %>
+      <% if flash[:result] %>
+        <%= flash[:result] %>
+      <% end %>
     </p>
-  <% end %>
+
 </div>

@@ -7,5 +7,5 @@ Rails.application.routes.draw do
   get "/", :controller=>"homepage", :action=>"index"
   get "/bands", :controller=>"homepage", :action=>"bands"
   get "/newbands", :controller=>"homepage", :action=>"newbands"
-  post "/bands", :controller=>"homepage", :action=>"newbandscompute"
+  post "/newbands", :controller=>"homepage", :action=>"newbandscompute"
 end

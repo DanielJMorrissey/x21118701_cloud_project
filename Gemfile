@@ -12,8 +12,6 @@ gem 'meta-tags'
 # hopefully adding bootstrap
 gem 'cssbundling-rails'
 
-# adding importmaps
-gem 'importmap-rails'
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.2", ">= 7.0.2.3"

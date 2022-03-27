@@ -19,6 +19,11 @@ class HomepageController < ApplicationController
     @bandname = params[:name]
     @bandcountry = params[:country]
     @bandmembers = params[:members]
+    if @bandmembers.to_i < 0
+      @bandmembers = @bandmembers.to_i * -1
+    elsif @bandmembers.to_i == 0
+      @bandmembers = @bandmembers.to_i + 1
+    end
     @bandgenre = params[:genre]
     if @bandname.length > 0 and @bandgenre.length > 0
       @band = Band.new(name:@bandname, country:@bandcountry, members:@bandmembers.to_i, genre:@bandgenre)
@@ -40,10 +45,6 @@ class HomepageController < ApplicationController
         redirect_to "/newbands"
       end
     else
-      flash[:name] = @bandname
-      flash[:country] = @bandcountry
-      flash[:members] = @bandmembers
-      flash[:genre] = @bandgenre
       @result = "Please enter a band name or genre!"
       flash[:result] = @result
       redirect_to "/newbands"

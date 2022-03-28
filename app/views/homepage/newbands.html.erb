@@ -1,4 +1,18 @@
 <div class="container">
+  <div class="row">
+    <div class="col-12">
+      <p id="newBandIntro">
+        Welcome. This page allows you to add your own band or artist recommendations, just fill out the form (instructions below) below!
+      </p>
+      <ul id="bandFormInstructions">
+        <li>Band/Artist name is required</li>
+        <li>Genre is required</li>
+        <li>Minimum number of members is 1</li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="container">
   <%= simple_form_for @band, url: '/newbands' do |b|  %>
   <div class="row">
     <% if flash[:name] %>
@@ -6,6 +20,7 @@
     <% else %>
       <%= b.input :name, label: "Name",input_html: { name: "name", class: "col-10" }, label_html: { id: "name" }  %>
     <% end %>
+    <span id="nameError"></span>
     <% if flash[:country] %>
       <%= b.input :country, as: :string, input_html: { name: "country", value: flash[:country], class: "col-10" }, label_html: { id: "country" }  %>
     <% else %>
@@ -23,6 +38,7 @@
     <% else %>
       <%= b.input :genre, label: "Genre", input_html: { name: "genre", class: "col-10" }, label_html: { id: "genre" }   %>
     <% end %>
+    <span id="genreError"></span>
   </div>
 
     <%= b.button :submit, "Save", class: "btn-primary", id: "save"  %>

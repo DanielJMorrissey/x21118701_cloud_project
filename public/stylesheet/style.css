@@ -112,13 +112,33 @@ h1, #intro{
   font-size: 1.3em;
 }
 
-audio, #bensound{
+audio, #bensound, #bandsDescription, #newBandIntro, #bandFormInstructions{
   width: 80%;
   display: block;
   margin: 1em auto;
 }
 
+#bandsDescription, #newBandIntro, #bandFormInstructions{
+  text-align: center;
+}
+
 #bensound > a{
   font-size: 1em;
   margin: 0em;
+}
+
+.quote{
+  background-color: #000;
+  color: #fff;
+  border-radius: 1em;
+  font-size: 1.5em;
+  text-align: center;
+  width: 80%;
+  margin: 1em auto;
+  padding: 10em;
+}
+
+#nameError, #genreError{
+  margin-left: 2em;
+  color: #ff0000;
 }

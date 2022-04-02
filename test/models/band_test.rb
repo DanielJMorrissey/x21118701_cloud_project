@@ -4,7 +4,7 @@ class BandTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end
-
+=begin
   test "Band Insert" do
 
     visit "/newbands"
@@ -18,4 +18,5 @@ class BandTest < ActiveSupport::TestCase
 
     expect("/newbands").to have_css('#flash', text: "Band Saved")
   end
+  =end
 end

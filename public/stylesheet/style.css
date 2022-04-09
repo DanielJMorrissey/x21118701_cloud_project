@@ -142,3 +142,7 @@ audio, #bensound, #bandsDescription, #newBandIntro, #bandFormInstructions{
   margin-left: 2em;
   color: #ff0000;
 }
+
+.slideshowContainer{
+  margin-top: 1em;
+}

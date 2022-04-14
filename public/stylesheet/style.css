@@ -2,7 +2,9 @@
   box-sizing: border-box;
 }
 
-
+/*
+  styling logo in the nav and footer for different screen sizes
+*/
 #logoNav, .logo{
   width: 40%;
   height: 80%;
@@ -19,6 +21,9 @@
   margin: 1em;
 }
 
+/*
+styling the nav
+*/
 @media screen and (max-width:600px) {
   #navUl{
     display: flex;
@@ -46,6 +51,9 @@ nav{
   }
 }
 
+/*
+styling the footer
+*/
 .footer-dark{
   padding: 50px 0px;
 }
@@ -68,10 +76,16 @@ li a{
   font-size: 16px;
 }
 
+/*
+positioning cards
+*/
 .cardContainer{
   justify-content: center;
 }
 
+/*
+styling the form
+*/
 input{
   padding: 0.5em;
   margin: 1em;
@@ -100,6 +114,9 @@ label, a{
   font-size: 1.1em;
 }
 
+/*
+positioning report after submissions
+*/
 #save{
   margin: auto;
   width: 10%;
@@ -107,6 +124,9 @@ label, a{
   min-width: fit-content;
 }
 
+/*
+styling h1, paragraphs and audio elements
+*/
 h1, #intro{
   text-align: center;
 }
@@ -169,6 +189,9 @@ audio, #bensound, #bandsDescription, #newBandIntro, #bandFormInstructions{
   color: #ff0000;
 }
 
+/*
+styling of slideshow
+*/
 .slideshowContainer{
   margin-top: 1em;
 }

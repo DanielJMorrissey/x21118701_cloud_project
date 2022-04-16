@@ -12,7 +12,6 @@ class HomepageController < ApplicationController
     @band = Band.new
   end
 
-
   # create- submitting a new band / artist
   def newbandscompute
     @band = Band.new

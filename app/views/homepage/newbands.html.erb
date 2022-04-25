@@ -1,9 +1,11 @@
+<%# Intro to new bands page %>
 <div class="container">
   <div class="row">
     <div class="col-12">
       <p id="newBandIntro">
         Welcome. This page allows you to add your own band or artist recommendations, just fill out the form (instructions below) below!
       </p>
+      <%# instructions on how to fill out the form %>
       <ul id="bandFormInstructions">
         <li>Band/Artist name is required</li>
         <li>Genre is required</li>
@@ -12,6 +14,7 @@
     </div>
   </div>
 </div>
+<%# form that uses the simple_form gem %>
 <div class="container">
   <%= simple_form_for @band, url: '/newbands' do |b|  %>
   <div class="row">
@@ -44,7 +47,7 @@
     <%= b.button :submit, "Save", class: "btn-primary", id: "save"  %>
   <% end %>
 
-
+    <%# displays result after submission %>
     <p id="flash">
       <% if flash[:result] %>
         <%= flash[:result] %>

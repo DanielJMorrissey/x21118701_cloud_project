@@ -1,18 +1,24 @@
 class HomepageController < ApplicationController
+
+  # get "/" - homepage
   def index
+    set_meta_tags description: "A band and artist recommendation website where people can add bands and artists they recommend and checkout bands and artists that other people recommend", keywords: %w[music homepage recommend recommendation band artist], title: "Homepage"
   end
 
   # get "/bands" - band listings, most recent first
   def bands
+    set_meta_tags description: "A band and artist recommendation website where people can add bands and artists they recommend and checkout bands and artists that other people recommend", keywords: %w[music bands list recommend recommendation band artist], title: "Bands"
     @bands = Band.all.order("id Desc")
   end
 
   # new- get /newbands, maps form to database
   def newbands
+    set_meta_tags description: "A band and artist recommendation website where people can add bands and artists they recommend and checkout bands and artists that other people recommend", keywords: %w[music new bands artists recommend recommendation band artist], title: "Add a New Band"
     @band = Band.new
   end
 
   # create- submitting a new band / artist
+  # post "/newbands"
   def newbandscompute
     @band = Band.new
     # getting input values from form

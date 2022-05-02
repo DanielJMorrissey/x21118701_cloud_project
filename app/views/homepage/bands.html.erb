@@ -3,7 +3,7 @@
   Recommended Bands
 </h1>
 <p id="bandsDescription">
-  Browse through this immense list of bands and artists the other people have recommended. Just be careful when you play you look them up. &#x1F918;
+  Browse through this immense list of bands and artists that other people have recommended and click on the YouTube search link provided to listen to the bands or artists music. &#x1F918;
 </p>
 <%# audio from copyright free source, just need to link to Bensound %>
 <audio controls>
@@ -23,7 +23,7 @@
         <td><%= band.country %></td>
         <td><%= band.members %></td>
         <td><%= band.genre %></td>
-        <td><a href="https://www.youtube.com/results?search_query=<%= band.name %>"><%= band.name %></a></td>
+        <td><a href="https://www.youtube.com/results?search_query=<%= band.name %>" target="_blank"><%= band.name %></a></td>
       </tr>
     <% end %>
 </table>

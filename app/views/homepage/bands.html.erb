@@ -15,7 +15,7 @@
 <%# table that displays data from database %>
 <table class="container table table-striped">
     <tr>
-      <th scope="col">Band Name</th><th scope="col">Country</th><th scope="col">Members</th><th scope="col">Genre</th>
+      <th scope="col">Band Name</th><th scope="col">Country</th><th scope="col">Members</th><th scope="col">Genre</th><th scope="col">YouTube Search Link</th>
     </tr>
     <% for band in @bands %>
       <tr>
@@ -23,6 +23,7 @@
         <td><%= band.country %></td>
         <td><%= band.members %></td>
         <td><%= band.genre %></td>
+        <td><a href="https://www.youtube.com/results?search_query=<%= band.name %>"><%= band.name %></a></td>
       </tr>
     <% end %>
 </table>
